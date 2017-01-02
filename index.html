@@ -4,7 +4,44 @@
 <head>
     <meta charset="utf-8">
     <title>콘도들</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css" type="text/css" media="screen" charset="utf-8">
+    <style>
+        html,
+        body {
+            height: 100%;
+            line-height: 160%;
+        }
 
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Nanum Gothic Coding', "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        p {
+            font-family: 'Nanum Gothic Coding';
+            font-size: 14px;
+            color: #333;
+            line-height: 1.65;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.12);
+        }
+
+        strong {
+            font-family: 'Nanum Gothic Coding';
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        a {
+            font-family: 'Nanum Gothic Coding';
+            color: #2C2C2C;
+            text-decoration: underline outline: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,36 +112,36 @@
          */
 
         var locs = [
-          ['대명 비발디파크(홍천)', 'http://www.daemyungresort.com/vp/', 'http://place.map.daum.net/11700350', 37.6462109, 127.6798098],
-          ['대명 소노펠리체(홍천)', 'http://www.daemyungresort.com/sn/', 'http://place.map.daum.net/17580291', 37.6519539,127.6800656],
-          ['대명 델피노(설악)', 'http://www.daemyungresort.com/dp/', 'http://place.map.daum.net/7822925', 38.2120109, 128.4919002],
-          ['대명 솔비치 양양', 'http://www.daemyungresort.com/sb/yy/', 'http://place.map.daum.net/26953215', 38.087024, 128.6634546],
-          ['대명 솔비치 삼척', 'http://www.daemyungresort.com/sb/sc/', 'http://place.map.daum.net/25657306', 37.4723264,129.1625543],
-          ['대명 양평', 'http://www.daemyungresort.com/yp/', 'http://place.map.daum.net/7825452', 37.4691956,127.5304188],
-          ['대명 단양', 'http://www.daemyungresort.com/dy/', 'http://place.map.daum.net/8300177', 36.9777429, 128.360214],
-          ['대명 경주', 'http://www.daemyungresort.com/gj/', 'http://place.map.daum.net/7823984', 35.8465349,129.2794373],
-          ['대명 변산', 'http://www.daemyungresort.com/bs/', 'http://place.map.daum.net/7823151', 35.6320103,126.4682649],
-          ['대명 거제 마리나', 'http://www.daemyungresort.com/go/', 'http://place.map.daum.net/19807174', 34.8430593,128.7005069],
-          ['대명 제주', 'http://www.daemyungresort.com/jj/', 'http://place.map.daum.net/11379388', 33.541178, 126.669603],
+            ['대명 비발디파크(홍천)', 'http://www.daemyungresort.com/vp/', 'http://place.map.daum.net/11700350', 37.6462109, 127.6798098],
+            ['대명 소노펠리체(홍천)', 'http://www.daemyungresort.com/sn/', 'http://place.map.daum.net/17580291', 37.6519539, 127.6800656],
+            ['대명 델피노(설악)', 'http://www.daemyungresort.com/dp/', 'http://place.map.daum.net/7822925', 38.2120109, 128.4919002],
+            ['대명 솔비치 양양', 'http://www.daemyungresort.com/sb/yy/', 'http://place.map.daum.net/26953215', 38.087024, 128.6634546],
+            ['대명 솔비치 삼척', 'http://www.daemyungresort.com/sb/sc/', 'http://place.map.daum.net/25657306', 37.4723264, 129.1625543],
+            ['대명 양평', 'http://www.daemyungresort.com/yp/', 'http://place.map.daum.net/7825452', 37.4691956, 127.5304188],
+            ['대명 단양', 'http://www.daemyungresort.com/dy/', 'http://place.map.daum.net/8300177', 36.9777429, 128.360214],
+            ['대명 경주', 'http://www.daemyungresort.com/gj/', 'http://place.map.daum.net/7823984', 35.8465349, 129.2794373],
+            ['대명 변산', 'http://www.daemyungresort.com/bs/', 'http://place.map.daum.net/7823151', 35.6320103, 126.4682649],
+            ['대명 거제 마리나', 'http://www.daemyungresort.com/go/', 'http://place.map.daum.net/19807174', 34.8430593, 128.7005069],
+            ['대명 제주', 'http://www.daemyungresort.com/jj/', 'http://place.map.daum.net/11379388', 33.541178, 126.669603],
 
-          ['한화 설악 쏘라노', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0101', 'http://place.map.daum.net/27025531', 38.2072319,128.5278665],
-          ['한화 설악 별관', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0100', 'http://place.map.daum.net/25547613', 38.2038748,128.5339935],
-          ['한화 백암 온천', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0200', 'http://place.map.daum.net/25040750', 36.7226016,129.3360729],
-          ['한화 지리산', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0300', 'http://place.map.daum.net/10927243', 35.2485501,127.4912079],
-          ['한화 용인 베잔송', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0400', 'http://place.map.daum.net/8137417', 37.1316464,127.141966],
-          ['한화 양평', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0500', 'http://place.map.daum.net/26020286', 37.5670146,127.4547495],
-          ['한화 수안보 온천', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0600', 'http://place.map.daum.net/25037788', 36.849557,127.9832261],
-          ['한화 산정호수 안시', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0700', 'http://place.map.daum.net/25022032', 38.0655631,127.3122838],
-          ['한화 해운대 티볼리', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0800', 'http://place.map.daum.net/10928789', 35.1544931,129.142908],
-          ['한화 대천 파로스', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0900', 'http://place.map.daum.net/25050021', 36.3045691,126.5176875],
-          ['한화 경주', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1000', 'http://place.map.daum.net/26507510', 35.8598109,129.2680491],
-          ['한화 제주', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1100', 'http://place.map.daum.net/8016361', 33.4489935,126.635218],
-          ['한화 평창 휘닉스파크', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1600', 'http://place.map.daum.net/16528524', 37.5786503,128.3294975],
+            ['한화 설악 쏘라노', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0101', 'http://place.map.daum.net/27025531', 38.2072319, 128.5278665],
+            ['한화 설악 별관', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0100', 'http://place.map.daum.net/25547613', 38.2038748, 128.5339935],
+            ['한화 백암 온천', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0200', 'http://place.map.daum.net/25040750', 36.7226016, 129.3360729],
+            ['한화 지리산', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0300', 'http://place.map.daum.net/10927243', 35.2485501, 127.4912079],
+            ['한화 용인 베잔송', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0400', 'http://place.map.daum.net/8137417', 37.1316464, 127.141966],
+            ['한화 양평', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0500', 'http://place.map.daum.net/26020286', 37.5670146, 127.4547495],
+            ['한화 수안보 온천', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0600', 'http://place.map.daum.net/25037788', 36.849557, 127.9832261],
+            ['한화 산정호수 안시', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0700', 'http://place.map.daum.net/25022032', 38.0655631, 127.3122838],
+            ['한화 해운대 티볼리', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0800', 'http://place.map.daum.net/10928789', 35.1544931, 129.142908],
+            ['한화 대천 파로스', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=0900', 'http://place.map.daum.net/25050021', 36.3045691, 126.5176875],
+            ['한화 경주', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1000', 'http://place.map.daum.net/26507510', 35.8598109, 129.2680491],
+            ['한화 제주', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1100', 'http://place.map.daum.net/8016361', 33.4489935, 126.635218],
+            ['한화 평창 휘닉스파크', 'http://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.asp?bp_cd=1600', 'http://place.map.daum.net/16528524', 37.5786503, 128.3294975],
 
-          ['용평 리조트', 'http://www.yongpyong.co.kr/', 'http://place.map.daum.net/8026700', 37.645009,128.680778],
-          ['비체 팰리스(무창포)', 'http://www.beachepalace.co.kr/bp/kor/index.do', 'http://place.map.daum.net/17344020', 36.2392716,126.5292158],
+            ['용평 리조트', 'http://www.yongpyong.co.kr/', 'http://place.map.daum.net/8026700', 37.645009, 128.680778],
+            ['비체 팰리스(무창포)', 'http://www.beachepalace.co.kr/bp/kor/index.do', 'http://place.map.daum.net/17344020', 36.2392716, 126.5292158],
 
-          ['휘닉스 제주(휘닉스 아일랜드)', 'http://phoenixhnr.co.kr/jeju/index', 'http://place.map.daum.net/8177478', 33.4305281,126.9282465]
+            ['휘닉스 제주(휘닉스 아일랜드)', 'http://phoenixhnr.co.kr/jeju/index', 'http://place.map.daum.net/8177478', 33.4305281, 126.9282465]
         ];
 
         // 마커를 표시할 위치와 title 객체 배열입니다
@@ -130,7 +167,13 @@
             });
 
             var info = new daum.maps.InfoWindow({
-                content: `<div>${e.title} <br /> <a href="${e.officialLink}">officialLink</a> <br /> <a href="${e.daumLink}">daumLink</a></div>` // 인포윈도우에 표시할 내용
+                content: `
+                <div style="padding: 20px;">
+                  ${e.title} <br />
+                  <a href="${e.officialLink}" target=_blank>officialLink</a> <br />
+                  <a href="${e.daumLink}" target=_blank>daumLink</a>
+                </div>`, // 인포윈도우에 표시할 내용
+                removable: true
             });
 
             // 마커에 이벤트를 등록하는 함수 만들고 즉시 호출하여 클로저를 만듭니다
@@ -139,11 +182,6 @@
                 // 마커에 mouseover 이벤트를 등록하고 마우스 오버 시 인포윈도우를 표시합니다
                 daum.maps.event.addListener(marker, 'mouseover', function() {
                     infowindow.open(map, marker);
-                });
-
-                // 마커에 mouseout 이벤트를 등록하고 마우스 아웃 시 인포윈도우를 닫습니다
-                daum.maps.event.addListener(marker, 'mouseout', function() {
-                    infowindow.close();
                 });
             })(m, info);
 
@@ -154,14 +192,20 @@
 
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-5050536-6', 'auto');
-      ga('send', 'pageview');
-
+        ga('create', 'UA-5050536-6', 'auto');
+        ga('send', 'pageview');
     </script>
 
 </body>
