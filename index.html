@@ -186,6 +186,9 @@
                 daum.maps.event.addListener(marker, 'touchstart', function() {
                     infowindow.open(map, marker);
                 });
+                daum.maps.event.addListener(marker, 'touchend', function() {
+                    infowindow.open(map, marker);
+                });
             })(m, info);
 
             return m;
