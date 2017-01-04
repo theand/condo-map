@@ -66,7 +66,7 @@
 
     // 마커 이미지의 이미지 주소입니다
     // var imageSrc = "./img/markerStar.svg";
-    var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
     var imageSize = new daum.maps.Size(48, 70);
     var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize);
     var markers = positions.map(function(e) {
