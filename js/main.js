@@ -67,7 +67,7 @@
     // 마커 이미지의 이미지 주소입니다
     // var imageSrc = "./img/markerStar.svg";
     var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-    var imageSize = new daum.maps.Size(48, 70);
+    var imageSize = new daum.maps.Size(24, 35);
     var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize);
     var markers = positions.map(function(e) {
         var m = new daum.maps.Marker({
@@ -91,7 +91,7 @@
         // 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
         (function(marker, infowindow) {
             // 마커에 mouseover 이벤트를 등록하고 마우스 오버 시 인포윈도우를 표시합니다
-            daum.maps.event.addListener(marker, 'mouseover click touchstart touchend', function() {
+            daum.maps.event.addListener(marker, 'mouseover', function() {
                 infowindow.open(map, marker);
             });
         })(m, info);
