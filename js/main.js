@@ -49,8 +49,10 @@
 
         ['용평 리조트', 'http://www.yongpyong.co.kr/', 'http://place.map.daum.net/8026700', 37.645009, 128.680778],
         ['비체 팰리스(무창포)', 'http://www.beachepalace.co.kr/bp/kor/index.do', 'http://place.map.daum.net/17344020', 36.2392716, 126.5292158],
+        //TODO 용평 여수 디오션
 
         ['휘닉스 제주(휘닉스 아일랜드)', 'http://phoenixhnr.co.kr/jeju/index', 'http://place.map.daum.net/8177478', 33.4305281, 126.9282465]
+        //TODO 휘닉스 평창
     ];
 
     // 마커를 표시할 위치와 title 객체 배열입니다
